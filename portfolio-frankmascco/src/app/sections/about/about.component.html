@@ -1,0 +1,50 @@
+<app-container>
+    <div class="about-wrapper">
+        <div class="about-left" appFadeIn [delay]="0">
+            <p class="intro" appFadeIn [delay]="200">{{ 'about.title' | translate }}</p>
+            <h1 class="name" appFadeIn [delay]="400">Frank Elias</h1>
+
+            <p class="description" appFadeIn [delay]="400">
+                {{ 'about.description' | translate }}
+            </p>
+
+            <div class="tags" appFadeIn [delay]="600">
+              <app-tag label="Spring Boot"></app-tag>
+              <app-tag label="Angular"></app-tag>
+              <app-tag label="MySQL"></app-tag>
+              <app-tag label="PostgreSQL"></app-tag>
+              <app-tag label="Apache Kafka"></app-tag>
+              <app-tag label="Keycloak"></app-tag>
+              <app-tag label="Grafana Stack"></app-tag>
+              <app-tag label="Docker"></app-tag>
+              <app-tag label="Kubernetes"></app-tag>
+              <app-tag label="Full Stack"></app-tag>
+          </div>
+
+        </div>
+
+        <div class="about-right" appFadeIn [delay]="200">
+            <div class="profile-section" appFadeIn [delay]="400">
+              <div class="profile-image">
+                  <img src="/img/FrankElias.webp" alt="Frank Elias" />
+              </div>
+              <div class="socials">
+                  <a href="https://github.com/FrankElias27" target="_blank" aria-label="GitHub" class="github" title="{{ 'links.github' | translate }}">
+                      <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/frank-mascco-dev27/" target="_blank" aria-label="LinkedIn" class="linkedin" title="{{ 'links.linkedin' | translate }}">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@frank_elias8074" target="_blank" aria-label="YouTube" class="youtube" title="{{ 'links.youtube' | translate }}">
+                      <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="mailto:frankmascco@gmail.com" aria-label="E-mail" class="email" title="{{ 'links.personalEmail' | translate }}">
+                      <i class="fas fa-envelope"></i>
+                  </a>
+              </div>
+          </div>
+
+
+        </div>
+    </div>
+</app-container>

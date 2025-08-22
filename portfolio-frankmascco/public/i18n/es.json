@@ -1,0 +1,55 @@
+{
+  "about": {
+    "title": "¡Qué tal! Soy",
+    "description": "Desarrollador de software junior | Ingeniero de Sistemas e Informatica apasionado por crear soluciones innovadoras. Especializado en desarrollar sistemas web robustos y escalables que resuelvan problemas reales."
+  },
+  "header": {
+    "home": "Inicio",
+    "certificates": "Certificados",
+    "cv": "CV"
+  },
+  "footer": {
+    "description": "Construyendo cosas geniales",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conectar",
+    "copyright": "Todos los derechos reservados.",
+    "scrollToTop": "Ir al inicio"
+  },
+  "projects": {
+    "title": "Lo que he construido",
+    "subtitle": "Explora mis proyectos, logros y aventuras creativas. Cada proyecto representa un desafío y una experiencia de aprendizaje única.",
+    "technologies": "Tecnologías utilizadas",
+    "empty": "No se encontraron proyectos. Algo salió mal. Por favor, intenta refrescar la página.",
+    "sourceCode": "Código fuente",
+    "demo": "Demostración",
+    "download": "Descargar",
+    "projectLinks": "Enlaces del proyecto"
+  },
+  "projectDetails": {
+    "back": "Volver",
+    "loading": "Cargando detalles del proyecto..."
+  },
+  "cv": {
+    "title": "CV",
+    "pdfPreview": "Vista previa del CV en PDF",
+    "none": "No se pudo cargar el CV o el CV no está disponible."
+  },
+  "certificates": {
+    "prev": "Certificado anterior",
+    "next": "Siguiente certificado",
+    "title": "Certificados y logros destacados",
+    "none": "No se pudieron cargar los certificados o no están disponibles."
+  },
+  "error": {
+    "default": "Ocurrió un error.",
+    "title": "¡Ups! Algo salió mal.",
+    "goHome": "Ir a la página de inicio",
+    "goBack": "Regresar"
+  },
+  "links": {
+    "github": "Cuenta de GitHub",
+    "linkedin": "Cuenta de LinkedIn",
+    "youtube": "Canal de YouTube",
+    "personalEmail": "Correo electrónico"
+  }
+}

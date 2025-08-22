@@ -1,0 +1,115 @@
+.cv-header {
+    text-align: center;
+}
+
+.cv-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0 0 var(--spacing-lg);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px var(--neon-emerald-50);
+}
+
+.cv-content {
+    width: 100%;
+    padding-bottom: var(--spacing-2xl);
+    display: flex;
+    justify-content: center;
+}
+
+.cv-preview-container {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neon-emerald-10);
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--black-30);
+    width: 100%;
+    min-width: 800px;
+}
+
+.cv-preview-container .pdf-container {
+    width: 100%;
+    height: 800px;
+    background: var(--bg-tertiary);
+}
+
+.cv-preview-container .pdf-container .cv-pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 1024px) {
+    .cv-preview-container {
+        min-width: 600px;
+    }
+
+    .cv-preview-container .pdf-container {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-preview-container {
+        min-width: 600px;
+    }
+
+    .cv-preview-container .pdf-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cv-preview-container {
+        min-width: 200px;
+    }
+
+    .cv-preview-container .pdf-container {
+        height: 500px;
+    }
+}
+
+.no-cv-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    min-height: 320px;
+    background: transparent;
+    border-radius: inherit;
+    box-shadow: none;
+    border: none;
+    color: var(--neon-emerald);
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.no-cv-placeholder i {
+    color: var(--neon-emerald);
+    margin-bottom: 1.25rem;
+    text-shadow: 0 0 5px var(--neon-emerald-20); /* reemplazo de .text-shadow-emerald-small */
+    filter: none;
+    animation: none;
+    opacity: 0.85;
+}
+
+.no-cv-placeholder p {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-shadow: 0 0 5px var(--neon-emerald-20); /* reemplazo de .text-shadow-emerald-small */
+}
