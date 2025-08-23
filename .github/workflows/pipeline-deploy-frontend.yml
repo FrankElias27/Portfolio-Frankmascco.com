@@ -36,7 +36,7 @@ jobs:
           file: docker/frontend/Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bsn-ui:latest,${{ secrets.DOCKERHUB_USERNAME }}/bsn-ui:${{ steps.extract_version.outputs.VERSION }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/portfolio-frontend:${{ steps.extract_version.outputs.VERSION }}
 
   deploy:
     name: Deploy Frontend
@@ -44,16 +44,16 @@ jobs:
     needs: [ build-image ]
     steps:
 
-      - name: Create deployment folder
-        run: ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} "mkdir -p ci-cd"
-
-      - name: Copy docker-compose file
-        run: scp -oStrictHostKeyChecking=no docker-compose.yml ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:ci-cd/docker-compose.yml
-
-      - name: Set ENV variable and deploy
+      - name: Pull & Run Docker container
         run: |
           ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} <<EOF
-          cd ci-cd
-          docker compose -f docker-compose.yml pull -q
-          docker compose -f docker-compose.yml up -d
+          # Detener y eliminar contenedor anterior si existe
+          docker stop portfolio-frontend || true
+          docker rm portfolio-frontend || true
+
+          # Descargar la última imagen del frontend
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-frontend:latest
+
+          # Ejecutar el contenedor
+          docker run -d --name portfolio-frontend -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-frontend:latest
           EOF
